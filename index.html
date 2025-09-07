@@ -55,7 +55,7 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="bg-[#f0fdf4]">
         <div
             class="bg-[#cff0dc] m-0 w-full grid grid-cols-1 md:grid-cols-3 justify-items-center pb-6 pt-6 md:pb-4 md:pt-8 lg:pb-0 lg:pt-6">
             <div class="hidden md:block md:mb-0"><img src="assets/hero-leaf1.png" alt="leaf"></div>
@@ -69,9 +69,26 @@
             </div>
             <div class="hidden md:block"><img src="assets/hero-leaf2.png" alt="leaf"></div>
         </div>
-
-
-
+        <h1 class="font-bold text-2xl text-center mt-6 mb-6 md:mt-24 md:mb-10">Choose Your Trees</h1>
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 md:gap-6 lg:gap-4 md:mx-auto md:px-10 lg:px-32 md:justify-items-between">
+            <div class=" p-4 rounded-xl h-fit w-full">
+                <h1 class="font-bold text-xl"> Categories</h1>
+                <div id="categories" class="">
+                    <div class="text-center"><span class="loading loading-bars loading-xs"></span></span></div>
+                </div>
+            </div>
+            <div class="col-span-4 mt-6 md:mt-0 grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 justify-center md:order-last lg:order-none"
+                id="plants">
+                <div></div>
+                <div class="text-center"><span class="animate-pulse loading loading-ring loading-xl"></span></div>
+                <div></div>
+            </div>
+            <div class="bg-white p-4 rounded-xl h-fit w-full mt-6 md:mt-0 lg:order-none">
+                <h1 class="font-bold text-xl"> Your Cart</h1>
+            </div>
+        </div>
+        <script src="script.js"></script>
 </body>
 
 </html>
