@@ -157,4 +157,10 @@ function getCartItems() {
     const cartData = localStorage.getItem("plantCart");
     return cartData ? JSON.parse(cartData) : [];
 }
-
+function removeFromCart(name) {
+    const cart = getCartItems();
+    const updatedCart = cart.filter(item => item.name !== name);
+    saveCartItems(updatedCart);
+    updateCartDisplay();
+    alert('Item removed from cart');
+}
