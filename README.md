@@ -1,8 +1,4 @@
-
-#### 7) Create a README file to answer the following question-
-
-
-#### 1) What is the difference between var, let, and const?
+ 1) What is the difference between var, let, and const?
         Ans: Var: var Can be reassigned.
                   Can be re-declared in the same scope.
                   Function-scoped
@@ -15,7 +11,7 @@
                     Cannot be re-declared in the same scope.
                     Block-scoped
 
-#### 2) What is the difference between map(), forEach(), and filter()?
+ 2) What is the difference between map(), forEach(), and filter()?
         Ans: map() : Use map() to change items and get a new list.
                     It returns a new array.
                     Does not modify the original array.
@@ -29,15 +25,28 @@
                    It returns a new array.
                    Keep only elements that match condition.
 
-#### 3) What are arrow functions in ES6?
+ 3) What are arrow functions in ES6?
         Ans : Arrow functions in ES6 (ECMAScript 2015) are a concise syntax for writing function expressions in JavaScript.
               Arrow functions are a shorter way to write functions in JavaScript.If the function body contains only a single expression, you can omit the braces and the return keyword.But if there is only one parameter, parentheses can be omitted.If there are no parameters, use empty parentheses.
               Traditional function hoisted.But arrow function not hoisted.
 
-#### 4) How does destructuring assignment work in ES6?
+4) How does destructuring assignment work in ES6?
+      Ans : Destructuring assignment in ES6 is a convenient way to extract values from arrays or properties from objects into distinct variables.
+            Use square brackets [] for array destructuring and Use curly braces {} for object destructuring.We can provide default values.We can rename variables in object destructuring.Destructuring works with nested structures.
 
-#### 5) Explain template literals in ES6. How are they different from string concatenation?
+5) Explain template literals in ES6. How are they different from string concatenation?
+      Ans : Template literals in ES6 (ECMAScript 2015) are a new way to work with strings that provide enhanced functionality compared to traditional string concatenation.
 
+      String Concatenation :
+      String Concatenation uses + operator. But  uses backticks ` and ${} for interpolation.
+      It requires \n or string concatenation
+      Can become messy with many + operators
+
+      Tamplate literals :
+      Template literals use backticks `.
+      Can put variables inside with ${...}.
+      Can write strings on multiple lines easily.
+      It’s cleaner and easier than using + to join strings.
 
 
 

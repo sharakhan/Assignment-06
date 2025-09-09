@@ -32,7 +32,6 @@ window.addEventListener("load", async function () {
 })
 
 function loadPlants(url) {
-    // show loader
     const plants = document.getElementById('plants').innerHTML = `<div></div>
                 <div class="text-center"><span class="animate-pulse loading loading-ring loading-xl"></span></div>
                 <div></div>`;
@@ -117,9 +116,9 @@ function showDetails(plantId) {
             modalBody.innerHTML = `
             <h3 class="font-bold text-2xl mb-2">${data.plants.name}</h3>
             <img src="${data.plants.image}" alt="Image" class="rounded-xl h-60 w-full object-cover mb-4 " />
-            <p class="text-justify mb-2"><i class="fa-solid fa-cannabis"></i> <span class="font-semibold">Description:</span> ${data.plants.description}</p>
-            <p><i class="fa-solid fa-bangladeshi-taka-sign"></i> <span class="font-semibold">Price:</span> ৳${data.plants.price}</p>
-            <p class="mt-2"><i class="fa-solid fa-tag"></i> <span class="font-semibold">Category:</span> ${data.plants.category}</p>
+            <p class="mt-2"><span class="font-semibold">Category:</span> ${data.plants.category}</p>
+            <p><span class="font-semibold">Price:</span> ৳${data.plants.price}</p>
+            <p class="text-justify mb-2"><span class="font-semibold">Description:</span> ${data.plants.description}</p>
             <button class="btn bg-gray-800 text-white rounded-3xl w-full mt-2" onclick="document.getElementById('plant-modal').classList.remove('modal-open')">Close</button>
       `;
             const modal = document.getElementById('plant-modal');
@@ -163,4 +162,15 @@ function removeFromCart(name) {
     saveCartItems(updatedCart);
     updateCartDisplay();
     alert('Item removed from cart');
+}
+function setActiveCategory(categoryId) {
+    if (!categoryId) {
+        categoryId = '99';
+    }
+    const childElements = document.getElementById('categories').querySelectorAll('*');
+    childElements.forEach(child => {
+        child.classList.remove('bg-green-700', 'text-white', 'rounded', 'cursor-pointer');
+    });
+    let activeCat = document.getElementById('cat' + categoryId);
+    activeCat.classList.add('bg-green-700', 'text-white', 'rounded', 'cursor-pointer');
 }
